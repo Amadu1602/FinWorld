@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,9 +12,20 @@
     stlite.mount({
       mainScriptData: `
 import streamlit as st
+from pathlib import Path
+import os
+from streamlit_option_menu import option_menu
+from apps import functions, lists
+from pages import homepage, monthendtasks, weeklytasks, adhoctasks, administrator
 
-name = st.text_input("Name")
-st.write("Hello, ", name or "world")
+
+def main():
+    name = st.text_input("Name")
+    st.write("Hello, ", name or "world")
+
+
+if __name__ == "__main__":
+    main()
 `
     })
   </script>
