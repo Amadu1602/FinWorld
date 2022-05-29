@@ -1,1 +1,1 @@
-# finworld.github.io
+# finworld
